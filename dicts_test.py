@@ -1,7 +1,10 @@
+"""Unit tests for the dicts module."""
+
 import dicts
 
 
 def test_add(monkeypatch, capsys):
+    """Checks that add_cities adds Biel and Basel to the dictionary."""
     cities = {'8000': 'Zürich', '1200': 'Genf', '1000': 'Lausanne', '3000': 'Bern', '8400': 'Winterthur',
               '6000': 'Luzern', '9000': 'St. Gallen', '6900': 'Lugano'}
     dicts.add_cities(cities)
@@ -10,6 +13,7 @@ def test_add(monkeypatch, capsys):
 
 
 def test_remove(monkeypatch, capsys):
+    """Checks that remove_cities removes the city with zip-code 8400."""
     cities = {'8000': 'Zürich', '1200': 'Genf', '1000': 'Lausanne', '3000': 'Bern', '8400': 'Winterthur',
               '6000': 'Luzern', '9000': 'St. Gallen', '6900': 'Lugano'}
     dicts.remove_cities(cities)
@@ -18,6 +22,7 @@ def test_remove(monkeypatch, capsys):
 
 
 def test_find(monkeypatch, capsys):
+    """Checks that find_cities prints the name for a zip-code and the zip-code for a name."""
     cities = {'8000': 'Zürich', '1200': 'Genf', '1000': 'Lausanne', '3000': 'Bern', '8400': 'Winterthur',
               '6000': 'Luzern', '9000': 'St. Gallen', '6900': 'Lugano'}
     dicts.find_cities(cities)
@@ -26,6 +31,7 @@ def test_find(monkeypatch, capsys):
 
 
 def test_loop(monkeypatch, capsys):
+    """Checks that loop_cities prints all cities as 'zip-code: name'."""
     cities = {'8000': 'Zürich', '1200': 'Genf', '1000': 'Lausanne', '3000': 'Bern', '8400': 'Winterthur',
               '6000': 'Luzern', '9000': 'St. Gallen', '6900': 'Lugano'}
     dicts.loop_cities(cities)
@@ -34,6 +40,7 @@ def test_loop(monkeypatch, capsys):
 
 
 def test_sort(monkeypatch, capsys):
+    """Checks that sort_cities prints all cities as 'name: zip-code', ordered by zip-code descending."""
     cities = {'8000': 'Zürich', '1200': 'Genf', '1000': 'Lausanne', '3000': 'Bern', '8400': 'Winterthur',
               '6000': 'Luzern', '9000': 'St. Gallen', '6900': 'Lugano'}
     dicts.sort_cities(cities)
