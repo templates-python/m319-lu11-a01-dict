@@ -1,6 +1,9 @@
+"""Exercises for working with Python dictionaries, using a dictionary of Swiss cities keyed by zip-code."""
+
+
 def main():
     """
-    main program - creates some dictionaries and calls the functions
+    Runs the dictionary exercises on a set of Swiss cities.
     """
     cities1 = {'8000': 'Zürich', '1200': 'Genf', '1000': 'Lausanne', '3000': 'Bern', '8400': 'Winterthur',
               '6000': 'Luzern', '9000': 'St. Gallen', '6900': 'Lugano'}
@@ -16,20 +19,24 @@ def main():
     loop_cities(cities3)
     sort_cities(cities3)
 
+
 def add_cities(city_dict):
     """
-    adds two cities
-    :param city_dict: dictionary of cities
+    Adds two cities to the dictionary.
+
+    :param city_dict (dict): dictionary of cities, keyed by zip-code
     :return: None
     """
     # TODO: add 2500 Biel
     # TODO: add 4000 Basel
     print('add_cities:\n', city_dict)
 
+
 def remove_cities(dict_cities):
     """
-    removes a city
-    :param dict_cities: dictionary of cities
+    Removes a city from the dictionary.
+
+    :param dict_cities (dict): dictionary of cities, keyed by zip-code
     :return: None
     """
     # TODO: remove the city with the zip-code 8400
@@ -38,8 +45,9 @@ def remove_cities(dict_cities):
 
 def find_cities(zip_city):
     """
-    finds a city
-    :param zip_city: dictionary of cities
+    Finds cities in the dictionary by zip-code and by name.
+
+    :param zip_city (dict): dictionary of cities, keyed by zip-code
     :return: None
     """
     print('find_city:')
@@ -50,8 +58,9 @@ def find_cities(zip_city):
 
 def loop_cities(city_dict):
     """
-    prints all cities using a loop
-    :param city_dict: dictionary of cities
+    Prints all cities using a loop.
+
+    :param city_dict (dict): dictionary of cities, keyed by zip-code
     :return: None
     """
     print('loop_cities:')
@@ -60,12 +69,14 @@ def loop_cities(city_dict):
 
 def sort_cities(dict_cities):
     """
-    sorts the cities by zip-code
-    :param dict_cities: dictionary of cities
+    Sorts and prints the cities by zip-code.
+
+    :param dict_cities (dict): dictionary of cities, keyed by zip-code
     :return: None
     """
     print('sort_cities:')
     # TODO: print all cities ordered by zip-Code (descending). output should be 'name: zip-code', i.e. 'Bern: 3000'
+
 
 if __name__ == '__main__':
     main()
